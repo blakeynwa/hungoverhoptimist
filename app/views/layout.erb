@@ -15,9 +15,18 @@
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
   <script src="/js/application.js"></script>
 
-  <title></title>
+  <title>Hungover Hoptimist</title>
 </head>
 <body>
+  <ul>
+    <li><a href="/">Home</a></li>
+    <% if !logged_in? %>
+    <li><a href="/login">Login</a></li>
+    <li><a href="/users/new">Register</a></li>
+    <% else %>
+    <li><a href="/profile"><%= current_user.first_name %></a></li>
+    <% end %>
+  </ul>
   <%= yield %>
 </body>
 </html>
