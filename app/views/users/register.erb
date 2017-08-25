@@ -1,12 +1,29 @@
 <%= erb :_errors %>
-<form action="/users" method="post">
-  <label for="first_name">First Name</label>
-  <input type="text" name="user[first_name]">
-  <label for="last_name">Last Name</label>
-  <input type="text" name="user[last_name]">
-  <label for="email">Email</label>
-  <input type="text" name="user[email]">
-  <label for="password">Password</label>
-  <input type="password" name="user[password]">
-  <input type="submit" name="Complete Registration">
-</form>
+<div class="row">
+  <form class="col s12" action="/users" method="post">
+    <div class="row">
+      <div class="input-field col s6">
+        <label for="first_name">First Name</label>
+        <input type="text" name="user[first_name]">
+      </div>
+      <div class="input-field col s6">
+        <label for="last_name">Last Name</label>
+        <input type="text" name="user[last_name]">
+      </div>
+    </div>
+    <div class="row">
+      <div class="input-field col s12">
+        <label for="email">Email</label>
+        <input type="text" name="user[email]">
+      </div>
+    </div>
+    <div class="row">
+      <div class="input-field col s12">
+        <label for="password">Password</label>
+        <input type="password" name="user[password]">
+      </div>
+    </div>
+        <input class="waves-effect waves-light btn" type="submit" name="Complete Registration">
+    </div>
+  </form>
+</div>
