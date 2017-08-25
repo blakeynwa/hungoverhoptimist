@@ -1,10 +1,14 @@
-<h1>The Hungover Hoptimist</h1>
-  <div>
-    <strong><p>Beer name: <%= @beer.name %></p></strong>
-    <% if @beer.abv && @beer.description %>
-    <p>Beer description: <%= @beer.description %></p>
-    <p>ABV: <%= @beer.abv %></p>
-    <% else %>
-    <p>We're still trying to learn more about this beer, we don't yet have a description or ABV!</p>
-    <% end %>
-  </div>
+<div>
+  <h4>Here's something we think you should try:</h4>
+  <strong><p>Beer name: <%= @beer.name %></p></strong>
+  <% if @beer.abv && @beer.description %>
+  <p>Beer description: <%= @beer.description %></p>
+  <p>ABV: <%= @beer.abv %></p>
+  <% else %>
+  <p>We're still trying to learn more about this beer, we don't yet have a description or ABV!</p>
+  <% end %>
+  <% @hops.each do |hop|  %>
+  <p><%= hop.name %></p>
+  <p><%= hop.description %></p>
+  <% end %>
+</div>

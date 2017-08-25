@@ -3,8 +3,12 @@ require 'brewery_db'
 
 class BeerAPI 
 
-  def beers
+  def random_beer
     client.beers.random
+  end
+
+  def show_hops
+    client.hops.all
   end
 
 
