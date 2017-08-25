@@ -25,6 +25,10 @@
     <li><a href="/users/new">Register</a></li>
     <% else %>
     <li><a href="/profile"><%= current_user.first_name %></a></li>
+    <li><form class="delete" action="/logout" method="post">
+      <input type="hidden" name="_method" value="delete" />
+      <input type="submit" value="Logout" class="delete" />
+    </form></li>
     <% end %>
   </ul>
   <%= yield %>
