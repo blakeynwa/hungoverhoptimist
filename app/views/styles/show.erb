@@ -1,0 +1,4 @@
+<h2>Beer Styles</h2>
+<% @styles.each do |style| %>
+  <p><%= style.id %>. <a href="/styles/<%= style.id %>"><%= style.name %></a></p>
+<% end %>
