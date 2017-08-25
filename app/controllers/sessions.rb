@@ -13,6 +13,11 @@ post '/login' do
     status 422
     @errors = ["Login Failed"]
     User.new(email: params[:email])
-    erb :'session/login'
+    erb :'sessions/login'
   end
+end
+
+delete '/logout' do 
+  session.delete(:user_id)
+  redirect '/'
 end
