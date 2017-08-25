@@ -10,7 +10,7 @@ post '/users' do
   else
     status 422
     @errors = @user.errors.full_messages
-    erb '/users/new'
+    erb :'users/register'
   end
 end
 
